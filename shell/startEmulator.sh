@@ -1,9 +1,8 @@
 #!/bin/bash
 
-CUR_DIR=$(cd `dirname $0`;pwd);
+source $(cd `dirname $0`;pwd)/base.sh;
 
-cd $CUR_DIR
-cd ../WORKING_DIRECTORY
+cd $AOSP_DIR
 
 # -debug
 # init
@@ -12,6 +11,10 @@ cd ../WORKING_DIRECTORY
 # -ramdisk /Volumes/androidSpace/android_work/out/target/product/generic/ramdisk.img
 # -avd firstAvd
 # -wipe-data
-# -skin WXGA800-7in
+# -gpu on
 
-./emulator
+source ./build/envsetup.sh
+
+lunch aosp_x86-eng
+
+emulator

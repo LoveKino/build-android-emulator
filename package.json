@@ -1,0 +1,27 @@
+{
+    "name": "build-android-emulator",
+    "version": "0.0.1",
+    "description": "build android emulator",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LoveKino/build-android-emulator.git"
+    },
+    "keywords": [
+        "build",
+        "android",
+        "emulator"
+    ],
+    "author": "ddchen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/LoveKino/build-android-emulator/issues"
+    },
+    "homepage": "https://github.com/LoveKino/build-android-emulator#readme",
+    "link_dependencies": {
+        "expand-android-api": "~0.0.1"
+    }
+}
