@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CUR_DIR=$(cd `dirname $0`;pwd)
-ANDROID_SPACE=/Volumes/untitled/
+ANDROID_SPACE=/Volumes/untitled
 AOSP_DIR=${ANDROID_SPACE}/WORKING_DIRECTORY
 GOLD_FISH_DIR=${ANDROID_SPACE}/goldfish
 # android-5.1.1_r26 for Lollipop Nexus6
@@ -17,6 +17,8 @@ else
     export OUT_DIR_COMMON_BASE=$AOSP_DIR/mac_linux/$ANDROID_BRANCH
     export CCACHE_DIR=${ANDROID_SPACE}/cache/linux/$ANDROID_BRANCH/.ccache
 fi
+
+#alias jack-admin=$AOSP_DIR/prebuilts/sdk/tools/jack-admin
 
 mkdir -p $CCACHE_DIR
 

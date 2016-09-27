@@ -17,16 +17,16 @@ fi
 
 source ./build/envsetup.sh
 
-# install jack server
-if [ $(uname) == "Darwin" ]
+if [ -f $AOSP_DIR/prebuilts/sdk/tools/jack-admin ]
 then
-    jack-admin uninstall-server
+    # install jack server
+    $AOSP_DIR/prebuilts/sdk/tools/jack-admin uninstall-server
     cd prebuilts/sdk/tools
-    jack-admin install-server jack-launcher.jar jack-server-4.9.ALPHA.jar
+    $AOSP_DIR/prebuilts/sdk/tools/jack-admin install-server jack-launcher.jar jack-server-4.9.ALPHA.jar
     cd ../../..
-    jack-admin start-server
+    $AOSP_DIR/prebuilts/sdk/tools/jack-admin start-server
 fi
-
+ 
 # make source
 lunch aosp_x86-eng
 make -j16
