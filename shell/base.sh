@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CUR_DIR=$(cd `dirname $0`;pwd)
 ANDROID_SPACE=/Volumes/untitled
+CUR_DIR=$(cd `dirname $0`;pwd)
 AOSP_DIR=${ANDROID_SPACE}/WORKING_DIRECTORY
 GOLD_FISH_DIR=${ANDROID_SPACE}/goldfish
 # android-5.1.1_r26 for Lollipop Nexus6
