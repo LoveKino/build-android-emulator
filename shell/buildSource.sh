@@ -13,8 +13,6 @@ else
     prebuilts/misc/linux-x86/ccache/ccache -M 50G
 fi
 
-#make clobber
-
 source ./build/envsetup.sh
 
 if [ -f $AOSP_DIR/prebuilts/sdk/tools/jack-admin ]
@@ -26,7 +24,9 @@ then
     cd ../../..
     $AOSP_DIR/prebuilts/sdk/tools/jack-admin start-server
 fi
+
+#make clobber
  
 # make source
-lunch aosp_x86-eng
+lunch aosp_x86_64-eng
 make -j16

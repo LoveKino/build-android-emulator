@@ -15,6 +15,7 @@ cd $AOSP_DIR
 
 source ./build/envsetup.sh
 
-lunch aosp_x86-eng
+lunch aosp_x86_64-eng
 
-emulator
+# TODO avd
+emulator -netdelay none -netspeed full
