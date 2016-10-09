@@ -29,4 +29,5 @@ fi
  
 # make source
 lunch aosp_x86_64-eng
-make -j16
+make update-api
+make -j32
