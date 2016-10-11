@@ -17,6 +17,7 @@ source ./build/envsetup.sh
 
 if [ -f $AOSP_DIR/prebuilts/sdk/tools/jack-admin ]
 then
+    export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
     # install jack server
     $AOSP_DIR/prebuilts/sdk/tools/jack-admin uninstall-server
     cd prebuilts/sdk/tools
@@ -29,5 +30,7 @@ fi
  
 # make source
 lunch aosp_x86_64-eng
+
 make update-api
+
 make -j32
