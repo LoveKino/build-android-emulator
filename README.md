@@ -13,3 +13,7 @@ just shut down all virtual boxes. Most people have genymotion running which caus
 - kill service
 
 eg: adb shell am force-stop  com.example.helloworld.yuer.freekiteservice
+
+## resource
+
+https://source.android.com/source/initializing.html
